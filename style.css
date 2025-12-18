@@ -75,6 +75,23 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.nav-brand-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.nav-brand-tagline {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: var(--text-light);
+  margin-top: 0.15rem;
 }
 
 .nav-menu {
@@ -119,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
   background-image: 
-    linear-gradient(135deg, rgba(74, 124, 89, 0.55) 0%, rgba(45, 90, 61, 0.55) 100%),
+    linear-gradient(135deg, rgba(74, 124, 89, 0.65) 0%, rgba(45, 90, 61, 0.65) 100%),
     url('banner_km.jpg');
   background-size: cover;
   background-position: center;
@@ -142,6 +159,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white);
   max-width: 900px;
   padding: 2rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  backdrop-filter: blur(3px);
 }
 
 .hero-title {
@@ -155,7 +175,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   font-weight: 500;
-  color: var(--accent-green);
+  color: var(--white);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.45);
 }
 
 .hero-description {
@@ -696,6 +717,19 @@ section {
   color: rgba(255,255,255,0.6);
 }
 
+.footer-mfg {
+  margin-top: 1rem;
+}
+
+.footer-mfg p {
+  margin-top: 0.35rem;
+  color: rgba(255,255,255,0.75);
+}
+
+.footer-mfg p strong {
+  color: rgba(255,255,255,0.9);
+}
+
 @media (max-width: 968px) {
   .nav-menu {
     gap: 1rem;
@@ -780,5 +814,13 @@ section {
 
   .nav-brand-text {
     font-size: 1.25rem;
+  }
+
+  .nav-brand-name {
+    font-size: 1.25rem;
+  }
+
+  .nav-brand-tagline {
+    font-size: 0.75rem;
   }
 }
