@@ -100,6 +100,23 @@ h1, h2, h3, h4, h5, h6 {
   gap: 2rem;
 }
 
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--primary-green);
+  margin: 4px 0;
+}
+
 .nav-menu a {
   color: var(--text-dark);
   text-decoration: none;
@@ -789,22 +806,75 @@ section {
 }
 
 @media (max-width: 768px) {
+  .navbar .container {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .nav-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-end;
+    gap: 0.75rem;
+    align-items: flex-start;
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    min-width: 210px;
+    z-index: 1001;
+  }
+
+  .nav-menu.nav-menu--open {
+    display: flex;
+  }
+
+  .nav-menu a {
+    width: 100%;
   }
   
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-content {
+    padding: 1.25rem;
+    margin: 0 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
   .hero-title {
     font-size: 2rem;
+    line-height: 1.2;
   }
   
   .hero-subtitle {
     font-size: 1.2rem;
+    line-height: 1.35;
   }
   
   .hero-description {
     font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-subtitle {
+    max-width: 36ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-description {
+    max-width: 52ch;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .section-header h2 {
@@ -836,6 +906,24 @@ section {
   
   .hero-title {
     font-size: 1.8rem;
+  }
+
+  .hero {
+    padding-top: 130px;
+  }
+
+  .hero-content {
+    padding: 1rem;
+    margin: 0 0.25rem;
+    border-radius: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
   }
   
   .nav-logo {
